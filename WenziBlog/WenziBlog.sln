@@ -5,18 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Protal", "Protal\Protal.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wz.Common", "Wz.Common\Wz.Common.csproj", "{62B493FB-6790-44AE-B296-C0488E445B2C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{A68677E1-078D-44A9-AAE6-AEEB016B751F}"
-	ProjectSection(SolutionItems) = preProject
-		H:\软通D盘\source\SmartTemplate\Library\Common.Logging.dll = H:\软通D盘\source\SmartTemplate\Library\Common.Logging.dll
-		H:\软通D盘\source\SmartTemplate\Library\Common.Logging.Log4Net.dll = H:\软通D盘\source\SmartTemplate\Library\Common.Logging.Log4Net.dll
-		H:\软通D盘\source\SmartTemplate\Library\log4net.dll = H:\软通D盘\source\SmartTemplate\Library\log4net.dll
-		H:\软通D盘\source\SmartTemplate\Library\MySql.Data.dll = H:\软通D盘\source\SmartTemplate\Library\MySql.Data.dll
-		H:\软通D盘\source\SmartTemplate\Library\Newtonsoft.Json.dll = H:\软通D盘\source\SmartTemplate\Library\Newtonsoft.Json.dll
-		H:\软通D盘\source\SmartTemplate\Library\NPOI.dll = H:\软通D盘\source\SmartTemplate\Library\NPOI.dll
-		H:\软通D盘\source\SmartTemplate\Library\NPOI.OOXML.dll = H:\软通D盘\source\SmartTemplate\Library\NPOI.OOXML.dll
-		H:\软通D盘\source\SmartTemplate\Library\NPOI.OpenXml4Net.dll = H:\软通D盘\source\SmartTemplate\Library\NPOI.OpenXml4Net.dll
-		H:\软通D盘\source\SmartTemplate\Library\NPOI.OpenXmlFormats.dll = H:\软通D盘\source\SmartTemplate\Library\NPOI.OpenXmlFormats.dll
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Librarys", "Librarys\Librarys.csproj", "{F44D34C7-8C8E-405B-A346-50FFD3EDDE7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +21,10 @@ Global
 		{62B493FB-6790-44AE-B296-C0488E445B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62B493FB-6790-44AE-B296-C0488E445B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62B493FB-6790-44AE-B296-C0488E445B2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F44D34C7-8C8E-405B-A346-50FFD3EDDE7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F44D34C7-8C8E-405B-A346-50FFD3EDDE7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F44D34C7-8C8E-405B-A346-50FFD3EDDE7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F44D34C7-8C8E-405B-A346-50FFD3EDDE7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

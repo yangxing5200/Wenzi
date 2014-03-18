@@ -1,0 +1,15 @@
+D:\workingspace\Wenzi\WenziBlog\Wz.Common\bin\Debug\Wz.Common.dll
+D:\workingspace\Wenzi\WenziBlog\Wz.Common\bin\Debug\Wz.Common.pdb
+D:\workingspace\Wenzi\WenziBlog\Wz.Common\bin\Debug\Common.Logging.dll
+D:\workingspace\Wenzi\WenziBlog\Wz.Common\bin\Debug\Common.Logging.Log4Net.dll
+D:\workingspace\Wenzi\WenziBlog\Wz.Common\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\workingspace\Wenzi\WenziBlog\Wz.Common\bin\Debug\log4net.dll
+D:\workingspace\Wenzi\WenziBlog\Wz.Common\bin\Debug\Newtonsoft.Json.dll
+D:\workingspace\Wenzi\WenziBlog\Wz.Common\bin\Debug\NPOI.dll
+D:\workingspace\Wenzi\WenziBlog\Wz.Common\bin\Debug\NPOI.OOXML.dll
+D:\workingspace\Wenzi\WenziBlog\Wz.Common\bin\Debug\NPOI.OpenXml4Net.dll
+D:\workingspace\Wenzi\WenziBlog\Wz.Common\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\workingspace\Wenzi\WenziBlog\Wz.Common\bin\Debug\OpenPop.dll
+D:\workingspace\Wenzi\WenziBlog\Wz.Common\bin\Debug\OpenSmtp.dll
+D:\workingspace\Wenzi\WenziBlog\Wz.Common\obj\Debug\Wz.Common.dll
+D:\workingspace\Wenzi\WenziBlog\Wz.Common\obj\Debug\Wz.Common.pdb
