@@ -73,6 +73,8 @@ D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\DotNetOpenAuth.OpenId.RelyingPart
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\EntityFramework.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Microsoft.Web.Infrastructure.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\MiniProfiler.dll
+D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\MiniProfiler.EntityFramework.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Newtonsoft.Json.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\System.Net.Http.Formatting.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\System.Web.Helpers.dll
@@ -84,9 +86,13 @@ D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\System.Web.Razor.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\System.Web.WebPages.Deployment.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\System.Web.WebPages.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\System.Web.WebPages.Razor.dll
+D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\WebActivator.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\WebGrease.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\WebMatrix.Data.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\WebMatrix.WebData.dll
+D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\MiniProfiler.pdb
+D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\MiniProfiler.xml
+D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\MiniProfiler.EntityFramework.pdb
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\EntityFramework.xml
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Newtonsoft.Json.xml
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\System.Net.Http.Formatting.xml
