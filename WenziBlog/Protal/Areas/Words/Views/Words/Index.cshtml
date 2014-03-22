@@ -2,10 +2,34 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<script type="text/javascript">
+    function del(id) {
+        if (confirm("你确定要删除该条记录吗？")) {
+            location.href = "/Words/Words/Del/" + id;
+        }
+    }
+</script>
 <h2>Index</h2>
-@foreach (Protal.Models.wz_word wz in Model)
-{
-    @wz.Content
-    <br/>
-}
+<a href="/Words/Words/Add">添加</a>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>内容</th>
+        <th>权限</th>
+        <th>创建人</th>
+        <th>创建时间</th>
+        <th>操作</th>
+    </tr>
+
+    @foreach (Protal.Models.wz_word wz in Model)
+    {
+        <tr>
+            <td>@wz.Id</td>
+            <td>@wz.Content</td>
+            <td>@wz.AuthName</td>
+            <td>@wz.Creator</td>
+            <td>@wz.CreateDate</td>
+            <td><a href="/Words/Words/Modify/@wz.Id" >修改</a>|<a href="javascript:del(@wz.Id)">删除</a></td>
+        </tr>
+    }
+</table>

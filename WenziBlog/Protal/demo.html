@@ -1,0 +1,513 @@
+﻿
+<!DOCTYPE html>
+<html class="no-js" xmlns="http://www.w3.org/1999/html"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+
+    <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/i/378 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Magic Leap</title>
+    <meta name="description" content="Magic Leap is a collective of visionaries, experts, rocket scientists and AI gurus from the fields of film, robotics, visualization, software, computing, music and user experience." />
+    <meta name="keywords" content="Rony Abovitz, Magic Leap, Magicleap, Hour Blue, Hourblue, studio, digital media, technology, collective imagination, technological singularity, vision, perception, visual, optical, imagery, omni-optical, sensoryware, pictures, augmented reality, augmented, reality, simulation, experiments, labs, graphic novels, comics, imagery, cosmic, sparkydog, flutterpod" />
+    <meta name="copyright" content="Magic Leap Studios Copyright 2014" />
+    <meta property="og:title" content="Magic Leap" />
+    <meta property="og:description" content="Magic Leap is a collective of visionaries, experts, rocket scientists and AI gurus from the fields of film, robotics, visualization, software, computing, music and user experience." />
+    <meta property="og:image" content="magicleap_share.jpg" />
+
+    <!-- Mobile viewport optimized: h5bp.com/viewport -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=no"/> <!--, user-scalable=no-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+    <link rel="stylesheet" href="http://cdn.magicleap.com/CDN/20140213174605_1_0_725/css/all.css">
+
+    <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+    <!-- All JavaScript at the bottom, except this Modernizr build.
+       Modernizr enables HTML5 elements & feature detects for optimal performance.
+       Create your own custom Modernizr build: www.modernizr.com/download/ -->
+    <script src="http://cdn.magicleap.com/CDN/20140213174605_1_0_725/js/libs/modernizr-2.5.3.min.js"></script>
+
+</head>
+<body ontouchstart="">
+    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+    <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div id="rootNode">
+        <div id="js-loader" class="loader">
+            <div class="table">
+                <div class="table-cell">
+                    <img class="loader-logo" src="http://cdn.magicleap.com/CDN/20140213174605_1_0_725/img/shell/magic_leap_logo.png">
+                    <div class="loader-text">Loading Data</div>
+                </div>
+            </div>
+        </div>
+        <div id="js-shell" class="shell preload">
+
+            <header id="js-header" class="header">
+                <nav id="js-main-nav" class="main-nav">
+                    <ul>
+                        <li id="js-nav-endorsements" class="nav-item">
+                            <div class="nav-icon nav-icon-endorsements"></div>
+                            Endorsements
+                            <div class="subnav-icon"></div>
+                        </li>
+                        <li id="js-nav-press" class="nav-item">
+                            <div class="nav-icon nav-icon-press"></div>
+                            Press
+                            <div class="subnav-icon"></div>
+                        </li>
+                        <li id="js-nav-cinematic" class="nav-item">
+                            <div class="nav-icon nav-icon-cinematic"></div>
+                            Cinematic Reality
+                        </li>
+                        <li id="js-nav-silver" class="nav-item">
+                            <div class="nav-icon nav-icon-silver"></div>
+                            Silver Screen
+                        </li>
+                        <li id="js-nav-desktop" class="nav-item">
+                            <div class="nav-icon nav-icon-desktop"></div>
+                            Your Desktop
+                        </li>
+                    </ul>
+                </nav>
+
+
+                <nav id="js-subnav" class="subnav">
+
+                    <script id="js-subnav-template" type="text/template">
+                        {{#if endorsements}}
+                            <div class="subnav-line"></div>
+                            <ul class="clearfix">
+                            {{#each endorsements}}
+                                <li id="js-subnav-endorsee-{{id}}" class="subnav-item" data-id="{{id}}">{{name}}</li>
+                            {{/each}}
+                            </ul>
+                            <div class="subnav-line"></div>
+                        {{else}}
+
+                        {{/if}}
+                    </script>
+
+                </nav>
+                <div id="js-logo" class="logo"></div>
+            </header>
+
+
+            <div id="js-pagination" class="pagination">
+                <div id="js-arrow-left" class="arrow-left"></div>
+                <div id="js-arrow-right" class="arrow-right"></div>
+            </div>
+
+            <footer id="js-footer" class="footer">
+               <div class="email-wrap">
+                <a class="email" href="mailto:info@magicleap.com">info@magicleap.com</a>
+                <div class="copyright">Copyright 2014. All rights reserved. Magic Leap, Inc.</div>
+               </div>
+                <div class="share-wrapper">
+                    <div id="js-share-fb" class="share-btn share-fb"></div>
+                    <div id="js-share-twitter" class="share-btn share-twitter"></div>
+                    <div id="js-share-google" class="share-btn share-google"></div>
+                </div>
+            </footer>
+
+            <div id="js-mobile-nav-overlay" class="mobile-nav-overlay"></div>
+            <div id="js-mobile-nav-wrap" class="mobile-nav-wrap">
+                <nav class="mobile-nav">
+                    <ul>
+                        <li id="js-mobile-menunav-cinematic" class="nav-item" data-section="cinematic">
+                            <div class="nav-icon nav-icon-cinematic"></div>
+                            Cinematic Reality
+                            <div class="menu-line menu-line-cinematic"></div>
+                        </li>
+
+                        <li id="js-mobile-menunav-silver" class="nav-item" data-section="silver">
+                            <div class="nav-icon nav-icon-silver"></div>
+                            Silver Screen
+                            <div class="menu-line menu-line-silver"></div>
+                        </li>
+
+                        <li id="js-mobile-menunav-desktop" class="nav-item" data-section="desktop">
+                            <div class="nav-icon nav-icon-desktop"></div>
+                            Your Desktop
+                            <div class="menu-line menu-line-desktop"></div>
+                        </li>
+
+                        <li id="js-mobile-menunav-releases" class="nav-item" data-section="press">
+                            <div class="nav-icon nav-icon-press"></div>
+                            Press
+                            <div class="menu-line menu-line-releases"></div>
+                            <nav id="js-mobile-subnav-releases" class="subnav active">
+
+                                <script id="js-mobile-subnav-releases-template" type="text/template">
+                                    {{#if releases}}
+                                    <ul class="clearfix">
+                                        {{#each releases}}
+                                        <li id="js-mobile-subnav-release-{{id}}" class="subnav-item" data-id="{{id}}">{{name}}</li>
+                                        {{/each}}
+                                    </ul>
+                                    <div class="subnav-line"></div>
+                                    {{else}}
+                                    {{/if}}
+                                </script>
+                            </nav>
+                            <div id="js-dropdown-icon-releases" class="nav-icon subnav-icon subnav-icon-press"></div>
+                        </li>
+
+                        <li id="js-mobile-menunav-endorsements" class="nav-item" data-section="endorsements">
+                            <div class="nav-icon nav-icon-endorsements"></div>
+                            Endorsements
+                            <div class="menu-line menu-line-endorsements"></div>
+                            <nav id="js-mobile-subnav" class="subnav active">
+ 
+                                <script id="js-mobile-subnav-template" type="text/template">
+                                    {{#if endorsements}}
+                                        <ul class="clearfix">
+                                        {{#each endorsements}}
+                                            <li id="js-mobile-subnav-endorsee-{{id}}" class="subnav-item" data-id="{{id}}">{{name}}</li>
+                                        {{/each}}
+                                        </ul>
+                                        <div class="subnav-line"></div>
+                                    {{else}}
+                                    {{/if}}
+                                </script>
+                            </nav>   
+                            <div id="js-dropdown-icon" class="nav-icon subnav-icon subnav-icon-endorsements"></div>
+                        </li>
+
+                        <li id="js-menunav-email" class="nav-item" data-section="none">
+                            <div class="nav-icon nav-icon-email"></div>
+                            <a href="mailto:info@magicleap.com">info@magicleap.com</a>
+                            <div class="menu-line menu-line-email"></div>
+                        </li>
+                        <li id="js-menunav-share" class="nav-item" data-section="none">
+                            <div class="share-wrap clearfix">
+                                <div id="Div1" class="share-btn share-fb"></div>
+                                <div id="Div2" class="share-btn share-twitter"></div>
+                                <div id="Div3" class="share-btn share-google"></div>
+                            </div>
+                            <div class="menu-line menu-line-share"></div>
+                        </li>
+                    </ul>
+                    <div class="copyright">Copyright 2014. All rights reserved. Magic Leap, Inc.</div>
+                </nav>
+                <div id="js-menu-icon" class="menu-icon">
+                    <div class="menu-icon-line"></div>
+                    <div class="menu-icon-line"></div>
+                    <div class="menu-icon-line"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="js-sections" class="sections preload">
+            <div id='slider' class='swipe'>
+                <div class='swipe-wrap clearfix'>
+
+                    <section id="js-endorsements" class="l-endorsements section">
+                        <script id="js-endorse-template" type="text/template">
+                            {{#each endorsements}}
+                            <div id="js-endorsee-{{id}}" class="endorsee">
+                                <div id="js-bg-endorsee-{{id}}" class="bg-endorsee-{{id}} section-bg" data-desktopBG="{{image_desktop}}" data-mobileBG="{{image_mobile}}"></div>
+                                <div class="content">
+                                    <div class="table">
+                                        <div class="table-cell">
+                                            <div class="full-name">
+                                                <h2 class="first-name">{{first_name}}</h2> <br/>
+                                                <h2 class="colorline-endorsements last-name">{{last_name}}</h2> <!--//{{name}}-->
+                                            </div>
+                                            {{#if copy}}
+                                            <p class="quote"><span class="quote-mark-start">"</span> {{copy}} <span class="quote-mark-end"> "</span></p>
+                                            {{/if}}
+
+                                            {{#if title}}
+                                            <h3>{{title}}</h3>
+                                            {{/if}}
+
+                                            <div class="content-btns">
+                                                {{#if bio}}
+                                                <div class="btn btn-bio" data-endorsee-id="{{id}}">
+                                                    Biography
+                                                    <div class="btn-arrow"></div>
+                                                </div>
+                                                {{/if}}
+                                                {{#if youtube}}
+                                                <div class="btn btn-video" data-endorsee-id="{{id}}">
+                                                    Watch Video
+                                                    <div class="btn-arrow"></div>
+                                                </div>
+                                                {{/if}}
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {{#if bio}}
+                                    <div class="bio-wrap lightbox-template">
+                                        <div id="js-bio-img" class="js-bio-img bio-img" data-desktopbg="{{bio_image_desktop}}" data-mobilebg="{{bio_image_mobile}}"></div>
+                                        <div id="js-bio" class="bio">
+                                            <div class="bio-content">
+                                                <h2>{{name}}</h2>
+                                                <h3>{{title}}</h3>
+                                                <div class="line"></div>
+                                                <p>{{linebreaks bio}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {{/if}}
+
+                                {{#if youtube}}
+                                    <div class="vid-wrap lightbox-template" data-url="{{youtube}}">
+                                {{/if}}
+                                </div>
+                            </div>
+
+                            {{else}}
+                           <div id="js-coming-soon" class="coming-soon section">
+                                <div id="js-coming-soon-bg" class="coming-soon-bg section-bg bg-leaper"></div>
+                                <div class="content">
+                                    <div class="table">
+                                        <div class="table-cell">
+                                            <h2 class="colorline-coming-soon">Endorsements</h2><br/>
+                                            <h2>Coming Soon</h2>
+                                            <p class="message">Check back soon for endorsements from top entertainment and technology luminaries.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{/each}}
+                            <h3 class="mobile-section-title endorsements">
+                                <div class="mobile-section-icon endorsements"></div>
+                                Endorsements
+                            </h3>
+                        </script>
+                    </section>
+
+                    <section id="js-press" class="l-releases section">
+
+
+
+                        <script id="js-release-template" type="text/template">
+
+
+
+
+                            {{#each releases}}
+                            <div id="js-release-{{id}}" class="release">
+                                <div id="js-bg-release-{{id}}" class="bg-release-{{id}} section-bg press" data-desktopBG="{{image_desktop}}" data-mobileBG="{{image_mobile}}"></div>
+                                <div class="content">
+                                    <div class="table">
+                                        <div class="table-cell fullpage-table-cell">
+                                            <h2 class="releases-title">Press</h2>
+                                            <div class="release-title">{{title}}</div> <br/>
+                                            {{#if copy}}
+                                            <p class="release-summary"><span class="release-byline">{{byline}}</span> - {{copy}}<a class="js-release-readmore release-read-more" data-release-id="{{id}}" >Read more</a></p>
+                                            {{/if}}
+
+
+
+                                            <div class="content-btns press">
+                                                {{#if download_url}}
+                                                <div class="btn js-btn_download btn-download" data-release-id="{{id}}" href="{{download_url}}" target="_blank">
+                                                    Download release
+                                                    <div class="btn-arrow"></div>
+                                                </div>
+                                                {{/if}}
+                                                {{#if press_contact}}
+                                                <div class="btn js-btn_press_contact btn-press_contact" data-release-id="{{id}}">
+                                                    Press contact
+                                                    <div class="btn-arrow"></div>
+                                                </div>
+                                                {{/if}}
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {{#if fullcopy}}
+                                <div class="js-release-fullcopy release-fullcopy">
+                                    <div class="js-full_copy full_copy_wrap lightbox-template">
+                                        <div class="full-copy-content js-full-copy-{{id}}">
+                                            <div class="full-copy-paragraph">
+                                                <br/><br/>
+                                                <div class="fullcopy-title">{{title}}</div> <br/>
+                                                <span class="fullcopy-byline">{{byline}} - </span>{{linebreaks fullcopy}}
+                                                <br/><br/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{/if}}
+
+                                {{#if press_contact}}
+                                <div class="js-press-contact press_contact_wrap lightbox-template">
+                                    <div class="press-contact-title">Press Contact</div>
+                                    <hr class="press-contact-hr"/>
+                                    <div class="press-contact-agency">
+                                        Rogers & Cowan for Magic Leap, Inc.
+                                    </div>
+
+                                    <div class="press-contact-agent-outer">
+                                        <div class="press-contact-agent-inner">
+                                            <div class="press-contact-agent--person">
+                                                Sallie Olmsted | Los Angeles
+                                            </div>
+                                            <div class="press-contact-agent--phone">
+                                                310-854-8100
+                                            </div>
+                                            <div class="press-contact-agent--email">
+                                                <a href="mailto:solmsted@rogersandcowan.com"> solmsted@rogersandcowan.com</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="press-contact-agent-outer">
+                                        <div class="press-contact-agent-inner">
+                                            <div class="press-contact-agent--person">
+                                                Nicole Lewis | South Florida
+                                            </div>
+                                            <div class="press-contact-agent--phone">
+                                                561.391.5930 x 307
+                                            </div>
+                                            <div class="press-contact-agent--email">
+                                                <a href="mailto: lewis@rogersandcowan.com"> lewis@rogersandcowan.com</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{/if}}
+
+                                {{#if youtube}}
+                                <div class="vid-wrap lightbox-template" data-url="{{youtube}}">
+                                    {{/if}}
+                                </div>
+                            </div>
+
+                            {{else}}
+                            <div id="js-coming-soon" class="coming-soon section">
+                                <div id="js-coming-soon-bg" class="coming-soon-bg section-bg bg-leaper"></div>
+                                <div class="content">
+                                    <div class="table">
+                                        <div class="table-cell">
+                                            <h2 class="colorline-coming-soon">Press</h2><br/>
+                                            <h2>Coming Soon</h2>
+                                            <p class="message">Check back soon for press releases.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{/each}}
+                            <h3 class="mobile-section-title press">
+                                <div class="mobile-section-icon press"></div>
+                                Press
+                            </h3>
+                        </script>
+                    </section>
+
+                    <section id="js-cinematic" class="l-cinematic section section-get-height">
+                        <div id="js-bg-cinematic" class="bg-cinematic section-bg">
+                            <div id="canvas_container" > </div>
+                        </div>
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    <h2 class="colorline-cinematic">Cinematic Reality<span class="trademark">™</span></h2><br/>
+                                    <h2>Is Coming</h2>
+                                    <h3 class="mobile-section-title cinematic">
+                                        <div class="mobile-section-icon cinematic"></div>
+                                        Cinematic Reality
+                                    </h3>
+                                    <div id="js-scroll-arrow" class="scroll-arrow-wrap" data-section="silver">
+                                        <div class="scroll-arrow"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="js-silver" class="l-silver section section-get-height">
+                        <div id="js-bg-silver" class="bg-silver section-bg">
+                            <div class="copyright">© Hour Blue Project Productions, Inc. 2011, 2014</div>
+                        </div>
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    <h2>The World is</h2><br/>
+                                    <h2 class="colorline-silver">Your New Silver Screen<span class="trademark">™</span></h2>
+                                    <h3 class="mobile-section-title silver">
+                                        <div class="mobile-section-icon silver"></div>
+                                        Silver Screen
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="js-desktop" class="l-desktop section section-get-height">
+                        <div id="js-bg-desktop" class="bg-desktop section-bg"></div>
+                        <div class="content">
+                            <div class="table">
+                                <div class="table-cell">
+                                    <h2>The World is</h2><br/>
+                                    <h2 class="colorline-desktop">Your New Desktop<span class="trademark">™</span></h2>
+                                    <h3 class="mobile-section-title desktop">
+                                        <div class="mobile-section-icon desktop"></div>
+                                        Your Desktop
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+                </div>
+            </div>
+        </div>
+        <div id="js-lightbox-wrap" class="lightbox-wrap">
+            <div id="js-ligtbox-overlay" class="lightbox-overlay"></div>
+            <div id="js-lightbox" class="lightbox">
+                <div id="js-close-btn" class="close-btn"></div>
+            </div>
+        </div>
+    </div>
+    <div id="js-ie8" class="ie8 section">
+        <div id="js-ie8-bg" class="ie8-bg">
+            <img id="js-old-ie-bg" src="http://cdn.magicleap.com/CDN/20140213174605_1_0_725/img/sections/bg/leaper_bg.jpg">
+        </div>
+        <div class="content">
+            <div class="table">
+                <div class="table-cell">
+                    <h2 class="colorline-ie8">Unsupported</h2><br/>
+                    <h2>Browser</h2>
+                    <p class="message">Please upgrade your browser to enjoy the optimum Magic Leap experience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script data-main="http://cdn.magicleap.com/CDN/20140213174605_1_0_725/js/loader" src="http://cdn.magicleap.com/CDN/20140213174605_1_0_725/js/libs/require.js"></script>
+    <script id="2d-vertex-shader" type="x-shader/x-vertex">
+        attribute vec2 a_position;
+
+        void main() {
+        gl_Position = vec4(a_position, 0, 1);
+        }
+    </script>
+
+    <script id="2d-fragment-shader" type="x-shader/x-fragment">
+        void main() {
+        gl_FragColor = vec4(0.001,0.001,0.001,0.020);  // green
+        }
+    </script>
+
+
+<!-- version: 1.0.725 -->
+</body>
+</html>

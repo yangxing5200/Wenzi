@@ -11,7 +11,7 @@ namespace Protal.Models
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class wz_word
     {
         public int Id { get; set; }
@@ -21,5 +21,20 @@ namespace Protal.Models
         public Nullable<System.DateTime> CreateDate { get; set; }
         public Nullable<System.DateTime> ModifyDate { get; set; }
         public int IsDelete { get; set; }
+        public string AuthName
+        {
+            get
+            {
+                if (Authority == 0)
+                {
+                    return "公开";
+                }
+                if (Authority == 1)
+                {
+                    return "指定人可见";
+                }
+                return "仅主人可见";
+            }
+        }
     }
 }

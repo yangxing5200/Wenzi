@@ -1,0 +1,19 @@
+﻿@model Protal.Models.wz_word
+@{
+    ViewBag.Title = "Modify";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (@Html.BeginForm("Modify", "Words", FormMethod.Post))
+{
+    @Html.TextBoxFor(x => x.Content);<br/>
+    @Html.DropDownListFor(x => x.Authority, new ArraySegment<SelectListItem>(
+       new[] {
+            new SelectListItem{Text = "公开",Value = "0"},
+            new SelectListItem{Text = "指定人可见",Value = "1"},
+            new SelectListItem{Text = "仅主人可见",Value = "2"},
+        }))
+    <br/>
+    <input type="submit" value="保存"/>@Html.ActionLink("返回","Index","Words")
+}

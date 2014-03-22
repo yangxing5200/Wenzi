@@ -10,21 +10,21 @@ namespace Protal.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "修改此模板以快速启动你的 ASP.NET MVC 应用程序。";
+            ViewBag.Message = "欢迎来到wz的个人博客";
 
             return View();
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "你的应用程序说明页。";
+            ViewBag.Message = "没事就来说两句。";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "你的联系方式页。";
+            ViewBag.Message = "QQ：418505093。";
 
             return View();
         }

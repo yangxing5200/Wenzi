@@ -1,0 +1,17 @@
+﻿@model Protal.Models.wz_word
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm("Add", "Words", FormMethod.Post))
+{
+    @Html.Label("内容")   @Html.TextBoxFor(x => x.Content)<br />
+    @Html.Label("权限")@Html.DropDownListFor(x => x.Authority, new SelectListItem[]
+                         {
+                             new SelectListItem{Text = "公开",Value = "0"},
+                             new SelectListItem{Text = "指定人可见",Value = "1"},
+                             new SelectListItem{Text = "仅主人可见",Value = "2"},
+                         })
+     <input type="submit" value="保存"/>@Html.ActionLink("返回","Index","Words")
+}
+<h2>Add</h2>
