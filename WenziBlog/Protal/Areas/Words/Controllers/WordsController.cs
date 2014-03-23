@@ -31,6 +31,7 @@ namespace Protal.Areas.Words.Controllers
 
             db.wz_word.Add(model);
             db.SaveChanges();
+            db.Entry(model).State  = EntityState.Detached;
             return RedirectToAction("Index", "Words");
         }
 
@@ -38,15 +39,18 @@ namespace Protal.Areas.Words.Controllers
         public ActionResult Modify(int id)
         {
             wz_word model = (from d in db.wz_word where d.Id == id && d.IsDelete == 0 select d).FirstOrDefault();
+           
             return View(model);
         }
         [HttpPost]
         public ActionResult Modify(wz_word model)
         {
-            var tempDb = db.Entry(model);
-            tempDb.State = EntityState.Unchanged;
-            tempDb.Property(x => x.Content).IsModified = true;
-            tempDb.Property(x => x.Authority).IsModified = true;
+            model.ModifyDate = DateTime.Now;
+            var entityEntry = db.Entry(model);
+            entityEntry.State = EntityState.Unchanged;
+            entityEntry.Property(x => x.Content).IsModified = true;
+            entityEntry.Property(x => x.Authority).IsModified = true;
+            entityEntry.Property(x => x.ModifyDate).IsModified = true;
             db.SaveChanges();
 
             return RedirectToAction("Index", "Words");
