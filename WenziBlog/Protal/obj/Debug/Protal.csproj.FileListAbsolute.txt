@@ -130,3 +130,12 @@ D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\zh-Hans\WebMatrix.WebData.resourc
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\obj\Debug\Protal.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\obj\Debug\Protal.pdb
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\obj\Debug\Protal.csprojResolveAssemblyReference.cache
+D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Ext.Net.dll
+D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Ext.Net.Utilities.dll
+D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\log4net.dll
+D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Transformer.NET.dll
+D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\WebActivatorEx.dll
+D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Ext.Net.xml
+D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Ext.Net.Utilities.xml
+D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\log4net.xml
+D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Transformer.NET.xml
