@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Common.Logging;
 using Protal.Models;
 
 namespace Protal.Areas.Words.Controllers
@@ -11,20 +12,24 @@ namespace Protal.Areas.Words.Controllers
     public class WordsController : Controller
     {
         blogdbEntities1 db=new blogdbEntities1();
+        private ILog log = LogManager.GetLogger("web");
         //
         // GET: /Words/Words/
 
         public ActionResult Index()
         {
+            log.Info("WordsController.Index"+DateTime.Now.ToString());
             return View(db.wz_word.ToList());
         }
         public ActionResult Add()
         {
+            log.Info("WordsController.Add(GET)" + DateTime.Now.ToString());
             return View();
         }
         [HttpPost]
         public ActionResult Add(wz_word model)
         {
+            log.Info("WordsController.Add(pOST)" + DateTime.Now.ToString());
             model.CreateDate = DateTime.Now;
             model.Creator = "system";
             model.IsDelete = 0;

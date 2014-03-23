@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<log4net>
+
+  <logger name="web">
+    <level value="ALL"/>
+    <appender-ref ref="WebLog"/>
+  </logger>
+  <appender name="WebLog" type="log4net.Appender.RollingFileAppender,log4net">
+    <param name="File" value="log\\web\\log.log"/>
+    <param name="MaximumFileSize" value="1MB"/>
+    <param name="CountDirection" value="1"/>
+    <param name="MaxSizeRollBackups" value="50"/>
+    <layout type="log4net.Layout.PatternLayout,log4net">
+      <param name="ConversionPattern" value="%d [%1t] %-3p [%-2c] - %m%n"/>
+    </layout>
+  </appender>
+  <root>
+    <priority value="ALL"/>
+    <appender-ref ref="File"/>
+  </root>
+</log4net>

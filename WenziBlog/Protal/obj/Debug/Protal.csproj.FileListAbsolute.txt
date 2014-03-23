@@ -139,3 +139,5 @@ D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Ext.Net.xml
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Ext.Net.Utilities.xml
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\log4net.xml
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Transformer.NET.xml
+D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Common.Logging.dll
+D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Common.Logging.Log4Net.dll
