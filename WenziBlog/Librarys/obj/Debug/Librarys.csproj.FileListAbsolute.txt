@@ -1,4 +1,5 @@
 D:\workingspace\Git\Wenzi\WenziBlog\Librarys\bin\Debug\Librarys.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Librarys\bin\Debug\Librarys.pdb
+D:\workingspace\Git\Wenzi\WenziBlog\Librarys\obj\Debug\Librarys.csprojResolveAssemblyReference.cache
 D:\workingspace\Git\Wenzi\WenziBlog\Librarys\obj\Debug\Librarys.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Librarys\obj\Debug\Librarys.pdb

@@ -1,6 +1,10 @@
-﻿@{
+﻿@using Ext.Net
+@using Ext.Net.MVC
+@model List<Protal.Models.wz_word>
+@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var X = @Html.X();
 }
 <script type="text/javascript">
     function del(id) {
@@ -10,6 +14,29 @@
     }
 </script>
 <h2>Index</h2>
+@(Html.X().GridPanel()
+        .Title("Array Grid")
+        .Width(600)
+        .Store(Html.X().Store()
+            .Model(Html.X().Model()
+                .Fields(
+                    new ModelField("Id"),
+                    new ModelField("Content", ModelFieldType.String),
+                    new ModelField("AuthName", ModelFieldType.String),
+                    new ModelField("Creator", ModelFieldType.String),
+                    new ModelField("CreateDate", ModelFieldType.Date, "M/d hh:mmtt")
+                )
+            )
+            .DataSource(Model)
+        )
+        .ColumnModel(
+            Html.X().Column().Text("编号").DataIndex("Id").Flex(1),
+            Html.X().Column().Text("内容").DataIndex("Content"),
+            Html.X().Column().Text("权限").DataIndex("AuthName"),
+            Html.X().Column().Text("创建人").DataIndex("Creator"),
+            Html.X().DateColumn().Text("创建时间").DataIndex("CreateDate")
+        )
+      )
 <a href="/Words/Words/Add">添加</a>
 <table class="table">
     <tr>
