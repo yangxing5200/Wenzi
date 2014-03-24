@@ -1,29 +1,60 @@
-﻿@using Ext.Net.MVC
+﻿@using Ext.Net
+@using Ext.Net.MVC
+@model List<Protal.Models.users_info>
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
     var X = Html.X();
 }
+<script type="text/javascript">
+    function del(id) {
+        if (confirm("你确定要删除该条记录吗？")) {
+            location.href = "/Words/Words/Del/" + id;
+        }
+    }
+    var op = function (cmd, obj) {
+        if (cmd == "Delete") {
+            // X.ajaxSend()
+            location.href = "/User/User/Del/" + obj.data.Id;
+           // App.gp.store.removeAt(obj.index);
+        } else {
+            App.UserForm.getForm().loadRecord(obj);
+            App.EditWindow.show(this);
+        }
+    };
 
+</script>
 <h2>Index</h2>
-@X.GridPanel().Title("列表")
+
+@(X.GridPanel()
+        .ID("gp")
+        .Title("列表")
         .Width(600)
         .Store(Html.X().Store()
             .Model(Html.X().Model()
                 .Fields(
                     new ModelField("Id"),
-                    new ModelField("Content", ModelFieldType.String),
-                    new ModelField("AuthName", ModelFieldType.String),
+                    new ModelField("LoginAcount", ModelFieldType.String),
+                    new ModelField("Password", ModelFieldType.String),
+                    new ModelField("UserName", ModelFieldType.String),
+                    new ModelField("Sex", ModelFieldType.Int),
+                    new ModelField("Age", ModelFieldType.Int),
+                    new ModelField("Email", ModelFieldType.String),
+                    new ModelField("Role", ModelFieldType.Int),
+                    new ModelField("IsAdmin", ModelFieldType.Boolean),
                     new ModelField("Creator", ModelFieldType.String),
-                    new ModelField("CreateDate", ModelFieldType.Date, "M/d hh:mmtt")
+                    new ModelField("CreateDate", ModelFieldType.Date),
+                    new ModelField("Modify", ModelFieldType.String),
+                    new ModelField("ModifyDate", ModelFieldType.Date)
                 )
             )
             .DataSource(Model)
         )
         .ColumnModel(
             Html.X().Column().Text("编号").DataIndex("Id").Flex(1),
-            Html.X().Column().Text("内容").DataIndex("Content"),
-            Html.X().Column().Text("权限").DataIndex("AuthName"),
-            Html.X().Column().Text("创建人").DataIndex("Creator"),
+            Html.X().Column().Text("账号").DataIndex("LoginAcount"),
+            Html.X().Column().Text("姓名").DataIndex("UserName"),
+            Html.X().Column().Text("密码").DataIndex("Password"),
             Html.X().DateColumn().Text("创建时间").DataIndex("CreateDate"),
             X.CommandColumn().Width(120).Commands(
            X.GridCommand().CommandName("Edit").Icon(Icon.ImageEdit).Text("修改"),
@@ -33,9 +64,40 @@
         (
             X.Button().Text("添加")
             .Icon(Icon.Add)
-            .Handler("App.UserForm.reset();App.Window2.show(this);"),
-                X.Button().Text("删除")
-                .Icon(Icon.Delete)
-                            .Handler("this.up('grid').deleteSelected(); App.UserForm.getForm().reset();")
+            .Handler("App.UserForm.reset();App.EditWindow.show(this);"), X.Button().Text("删除")
+            .Icon(Icon.Delete)
+            .Handler("this.up('grid').deleteSelected(); App.UserForm.getForm().reset();")
          )
-    ))
+      ))
+@(X.Window()
+        .ID("EditWindow")
+        .Icon(Icon.House)
+        .Title("用户信息编辑")
+        .Hidden(true)
+        .Width(520)
+        .Resizable(false)
+        .Modal(true)
+        .Items(items => items.Add(
+            Html.X().FormPanelForModel()
+            .ID("UserForm")
+            .Icon(Icon.User)
+            .Title("填写内容能提高账户安全性")
+            .Width(500)
+            .DefaultAnchor("100%")
+            .FieldDefaults(d =>
+                {
+                    d.LabelAlign = LabelAlign.Right;
+                    d.EmptyText = "请填写内容";
+                })
+            .Buttons(
+                Html.X().Button()
+                    .Text("保存")
+                    .Icon(Icon.Disk)
+                    .DirectClickAction("Save","User",Model)
+                    .Handler("updateRecord(this.up('form'), App.GridPanel1);"),
+                Html.X().Button()
+                    .Text("重置")
+                    .Handler("this.up('form').getForm().reset();")
+            )
+            ))
+)

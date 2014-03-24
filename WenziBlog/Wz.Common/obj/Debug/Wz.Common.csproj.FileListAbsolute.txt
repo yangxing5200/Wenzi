@@ -26,6 +26,5 @@ D:\workingspace\Git\Wenzi\WenziBlog\Wz.Common\bin\Debug\NPOI.OpenXml4Net.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Wz.Common\bin\Debug\NPOI.OpenXmlFormats.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Wz.Common\bin\Debug\OpenPop.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Wz.Common\bin\Debug\OpenSmtp.dll
-D:\workingspace\Git\Wenzi\WenziBlog\Wz.Common\obj\Debug\Wz.Common.csprojResolveAssemblyReference.cache
 D:\workingspace\Git\Wenzi\WenziBlog\Wz.Common\obj\Debug\Wz.Common.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Wz.Common\obj\Debug\Wz.Common.pdb

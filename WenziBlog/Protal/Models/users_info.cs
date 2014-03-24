@@ -7,25 +7,40 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations;
+
 namespace Protal.Models
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class users_info
     {
+        [Display(Name = "编号")]
         public int Id { get; set; }
+        [Display(Name = "登录名")]
         public string LoginAcount { get; set; }
+        [Display(Name = "昵称")]
         public string UserName { get; set; }
+        [Display(Name = "密码")]
         public string Password { get; set; }
+        [Display(Name = "性别")]
         public Nullable<int> Sex { get; set; }
+        [Display(Name = "年龄")]
         public Nullable<int> Age { get; set; }
+        [Display(Name = "邮箱")]
         public string Email { get; set; }
+        [Display(Name = "角色")]
         public Nullable<int> Role { get; set; }
+        [Display(Name = "是否管理员")]
         public Nullable<sbyte> IsAdmin { get; set; }
+        [Display(Name = "创建人")]
         public string Creator { get; set; }
+        [Display(Name = "创建时间")]
         public Nullable<System.DateTime> CreateDate { get; set; }
+        [Display(Name = "修改人")]
         public string Modify { get; set; }
+        [Display(Name = "修改时间")]
         public Nullable<System.DateTime> ModifyDate { get; set; }
     }
 }
