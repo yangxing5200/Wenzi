@@ -11,7 +11,7 @@ namespace Protal.Areas.Words.Controllers
 {
     public class WordsController : Controller
     {
-        blogdbEntities1 db=new blogdbEntities1();
+        blogdbEntities db = new blogdbEntities();
         private ILog log = LogManager.GetLogger("web");
         //
         // GET: /Words/Words/

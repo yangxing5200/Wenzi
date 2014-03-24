@@ -7,35 +7,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.ComponentModel.DataAnnotations;
-
 namespace Protal.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class wz_word
+    public partial class users_info
     {
         public int Id { get; set; }
-        
-        [Display(Name = "内容")]
-        [DataType(DataType.MultilineText)]
-        public string Content { get; set; }
-        public Nullable<int> Authority { get; set; }
+        public string LoginAcount { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public Nullable<int> Sex { get; set; }
+        public Nullable<int> Age { get; set; }
+        public string Email { get; set; }
+        public Nullable<int> Role { get; set; }
+        public Nullable<sbyte> IsAdmin { get; set; }
         public string Creator { get; set; }
         public Nullable<System.DateTime> CreateDate { get; set; }
+        public string Modify { get; set; }
         public Nullable<System.DateTime> ModifyDate { get; set; }
-        public int IsDelete { get; set; }
-           [DataType(DataType.MultilineText)]
-        public string AuthName{get
-        {
-            if (Authority == 0)
-            {
-                return "公开";
-            }
-            if (Authority == 1)
-                return "指定人可见";
-            return "仅主人可见";
-        }}
     }
 }

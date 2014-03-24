@@ -6,8 +6,27 @@
     <edmx:StorageModels>
       <Schema Namespace="blogdbModel.Store" Alias="Self" Provider="Devart.Data.MySql" ProviderManifestToken="MySQL, 5.6.14" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="blogdbModelStoreContainer">
+          <EntitySet Name="users_info" EntityType="blogdbModel.Store.users_info" store:Type="Tables" Schema="blogdb" />
           <EntitySet Name="wz_word" EntityType="blogdbModel.Store.wz_word" store:Type="Tables" Schema="blogdb" />
         </EntityContainer>
+        <EntityType Name="users_info">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LoginAcount" Type="varchar" MaxLength="50" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="Password" Type="varchar" MaxLength="50" />
+          <Property Name="Sex" Type="int" />
+          <Property Name="Age" Type="int" />
+          <Property Name="Email" Type="varchar" MaxLength="200" />
+          <Property Name="Role" Type="int" />
+          <Property Name="IsAdmin" Type="sbyte" />
+          <Property Name="Creator" Type="varchar" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="Modify" Type="varchar" MaxLength="50" />
+          <Property Name="ModifyDate" Type="datetime" />
+        </EntityType>
         <EntityType Name="wz_word">
           <Key>
             <PropertyRef Name="Id" />
@@ -25,9 +44,28 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="blogdbModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="blogdbEntities1" p1:LazyLoadingEnabled="true">
+        <EntityContainer Name="blogdbEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="users_info" EntityType="blogdbModel.users_info" />
           <EntitySet Name="wz_word" EntityType="blogdbModel.wz_word" />
         </EntityContainer>
+        <EntityType Name="users_info">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="LoginAcount" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Password" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Sex" Type="Int32" />
+          <Property Name="Age" Type="Int32" />
+          <Property Name="Email" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="Role" Type="Int32" />
+          <Property Name="IsAdmin" Type="SByte" />
+          <Property Name="Creator" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreateDate" Type="DateTime" Precision="0" />
+          <Property Name="Modify" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ModifyDate" Type="DateTime" Precision="0" />
+        </EntityType>
         <EntityType Name="wz_word">
           <Key>
             <PropertyRef Name="Id" />
@@ -45,7 +83,26 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="blogdbModelStoreContainer" CdmEntityContainer="blogdbEntities1">
+        <EntityContainerMapping StorageEntityContainer="blogdbModelStoreContainer" CdmEntityContainer="blogdbEntities">
+          <EntitySetMapping Name="users_info">
+            <EntityTypeMapping TypeName="blogdbModel.users_info">
+              <MappingFragment StoreEntitySet="users_info">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="LoginAcount" ColumnName="LoginAcount" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Modify" ColumnName="Modify" />
+                <ScalarProperty Name="ModifyDate" ColumnName="ModifyDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="wz_word">
             <EntityTypeMapping TypeName="blogdbModel.wz_word">
               <MappingFragment StoreEntitySet="wz_word">

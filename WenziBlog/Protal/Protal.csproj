@@ -198,6 +198,8 @@
     <Compile Include="App_Start\MiniProfilerConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\User\Controllers\UserController.cs" />
+    <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Areas\Words\Controllers\WordsController.cs" />
     <Compile Include="Areas\Words\WordsAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -208,24 +210,27 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\BlogDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BlogDB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\BlogDB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BlogDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\BlogDB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BlogDB.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\ExtNetModel.cs" />
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\users_info.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\wz_word.cs">
-      <DependentUpon>BlogDB.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -291,29 +296,31 @@
     <Content Include="Global.asax" />
     <Content Include="Areas\Words\Views\Web.config" />
     <Content Include="Areas\Words\Views\Words\Index.cshtml" />
-    <EntityDeploy Include="Models\BlogDB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BlogDB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <Content Include="Images\bgtab.gif" />
     <Content Include="Images\logo.jpg" />
     <Content Include="Images\RSS_icons.png" />
     <Content Include="log4net.xml" />
-    <Content Include="Models\BlogDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BlogDB.edmx</DependentUpon>
-      <LastGenOutput>BlogDB.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\BlogDB.edmx.diagram">
-      <DependentUpon>BlogDB.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\BlogDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BlogDB.edmx</DependentUpon>
-      <LastGenOutput>BlogDB.cs</LastGenOutput>
-    </Content>
     <Content Include="Areas\Words\Views\Words\Modify.cshtml" />
     <Content Include="Areas\Words\Views\Words\Add.cshtml" />
+    <Content Include="Areas\User\Views\Web.config" />
+    <Content Include="Areas\User\Views\User\Index.cshtml" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -377,6 +384,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\User\Models\" />
+    <Folder Include="Areas\User\Views\Shared\" />
     <Folder Include="Areas\Words\Models\" />
     <Folder Include="Areas\Words\Views\Shared\" />
   </ItemGroup>

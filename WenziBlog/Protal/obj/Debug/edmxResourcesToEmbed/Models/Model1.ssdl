@@ -1,8 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="blogdbModel.Store" Alias="Self" Provider="Devart.Data.MySql" ProviderManifestToken="MySQL, 5.6.14" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="blogdbModelStoreContainer">
+    <EntitySet Name="users_info" EntityType="blogdbModel.Store.users_info" store:Type="Tables" Schema="blogdb" />
     <EntitySet Name="wz_word" EntityType="blogdbModel.Store.wz_word" store:Type="Tables" Schema="blogdb" />
   </EntityContainer>
+  <EntityType Name="users_info">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LoginAcount" Type="varchar" MaxLength="50" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="Sex" Type="int" />
+    <Property Name="Age" Type="int" />
+    <Property Name="Email" Type="varchar" MaxLength="200" />
+    <Property Name="Role" Type="int" />
+    <Property Name="IsAdmin" Type="sbyte" />
+    <Property Name="Creator" Type="varchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="Modify" Type="varchar" MaxLength="50" />
+    <Property Name="ModifyDate" Type="datetime" />
+  </EntityType>
   <EntityType Name="wz_word">
     <Key>
       <PropertyRef Name="Id" />

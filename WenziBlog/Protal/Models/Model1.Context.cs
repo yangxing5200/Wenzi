@@ -13,10 +13,10 @@ namespace Protal.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class blogdbEntities1 : DbContext
+    public partial class blogdbEntities : DbContext
     {
-        public blogdbEntities1()
-            : base("name=blogdbEntities1")
+        public blogdbEntities()
+            : base("name=blogdbEntities")
         {
         }
     
@@ -25,6 +25,7 @@ namespace Protal.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<users_info> users_info { get; set; }
         public DbSet<wz_word> wz_word { get; set; }
     }
 }

@@ -140,4 +140,3 @@ D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\zh-Hans\Microsoft.Web.WebPages.OA
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\zh-Hans\WebMatrix.WebData.resources.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\obj\Debug\Protal.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\obj\Debug\Protal.pdb
-D:\workingspace\Git\Wenzi\WenziBlog\Protal\obj\Debug\Protal.csprojResolveAssemblyReference.cache

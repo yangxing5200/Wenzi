@@ -12,10 +12,30 @@
             location.href = "/Words/Words/Del/" + id;
         }
     }
+    var op = function (cmd, obj) {
+        if (cmd == "Delete") {
+            App.gp.store.removeAt(obj.index);
+        } else {
+            App.UserForm.getForm().loadRecord(obj);
+            App.Window2.show(this);
+        }
+    };
+
 </script>
 <h2>Index</h2>
-@(Html.X().GridPanel()
-        .Title("Array Grid")
+
+@(X.FormPanel()
+        .Title("说说")
+        .Width(800)
+        .BodyPadding(5)
+        .Layout(LayoutType.Column)
+        .FieldDefaults(fd => {
+            fd.LabelAlign = LabelAlign.Left;
+            fd.MsgTarget = MessageTarget.Side;
+        })
+        .Items(
+(Html.X().GridPanel()
+        .Title("列表")
         .Width(600)
         .Store(Html.X().Store()
             .Model(Html.X().Model()
@@ -34,9 +54,66 @@
             Html.X().Column().Text("内容").DataIndex("Content"),
             Html.X().Column().Text("权限").DataIndex("AuthName"),
             Html.X().Column().Text("创建人").DataIndex("Creator"),
-            Html.X().DateColumn().Text("创建时间").DataIndex("CreateDate")
+            Html.X().DateColumn().Text("创建时间").DataIndex("CreateDate"),
+            X.CommandColumn().Width(120).Commands(
+           X.GridCommand().CommandName("Edit").Icon(Icon.ImageEdit).Text("修改"),
+           X.GridCommand().CommandName("Delete").Icon(Icon.Delete).Text("删除")
+           ).Listeners(ls => ls.Command.Handler = "op(command,record)")
+      ).TopBar(X.Toolbar().Items
+        (
+            X.Button().Text("添加")
+            .Icon(Icon.Add)
+            .Handler("App.UserForm.reset();App.Window2.show(this);"),
+                X.Button().Text("删除")
+                .Icon(Icon.Delete)
+                            .Handler("this.up('grid').deleteSelected(); App.UserForm.getForm().reset();")
+         )
+    )
         )
-      )
+      )))
+
+
+@(X.Window()
+        .ID("Window2")
+        .Icon(Icon.House)
+        .Title("用户信息编辑")
+        .Hidden(true)
+        .Width(520)
+        .Resizable(false)
+        .Modal(true)
+        .Items(items => items.Add(
+            
+            Html.X().FormPanelForModel()
+            .ID("UserForm")
+            .Icon(Icon.User)
+          
+            .Title("填写内容能提高账户安全性")
+            .Width(500)
+            .DefaultAnchor("100%")
+            
+            .FieldDefaults(d =>
+                {
+                    d.LabelAlign = LabelAlign.Right;
+                    d.EmptyText = "请填写内容";
+                })
+            .Buttons(
+                Html.X().Button()
+                    .Text("保存")
+                 
+                    .Icon(Icon.Disk)
+                      .Handler("updateRecord(this.up('form'), App.GridPanel1);"),
+
+                //Html.X().Button()
+            //    .Text("创建")
+            //    .Icon(Icon.UserAdd)
+            //    .Handler("addRecord(this.up('form'), App.GridPanel1);"),
+
+                Html.X().Button()
+                    .Text("重置")
+                    .Handler("this.up('form').getForm().reset();")
+            )
+            ))
+)
 <a href="/Words/Words/Add">添加</a>
 <table class="table">
     <tr>

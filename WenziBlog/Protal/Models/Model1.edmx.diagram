@@ -4,8 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="708d037b2b4b4808a9ec9b60100867d3" Name="关系图1">
-        <EntityTypeShape EntityType="blogdbModel.wz_word" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="4e3847f5564f4e5ea41ab5a772a96389" Name="关系图1" ZoomLevel="49">
+        <EntityTypeShape EntityType="blogdbModel.users_info" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="blogdbModel.wz_word" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

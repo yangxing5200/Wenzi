@@ -14,8 +14,8 @@ namespace Protal.Models
             : base("DefaultConnection")
         {
         }
-
         public DbSet<UserProfile> UserProfiles { get; set; }
+     
     }
 
     [Table("UserProfile")]
