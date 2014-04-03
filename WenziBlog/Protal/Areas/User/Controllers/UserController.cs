@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Ext.Net;
 using Protal.Models;
 
 namespace Protal.Areas.User.Controllers
@@ -29,6 +30,7 @@ namespace Protal.Areas.User.Controllers
         }
         public ActionResult Save(users_info model)
         {
+            
             if (model.Id == 0)
             {
                 db.users_info.Add(model);
@@ -37,8 +39,9 @@ namespace Protal.Areas.User.Controllers
             else
             {
                 var dbEntry = db.Entry(model);
-                dbEntry.State = EntityState.Unchanged;
-                dbEntry.Property(x => x.UserName).IsModified = true;
+                UpdateModel(model);
+                //dbEntry.State = EntityState.Unchanged;
+                //dbEntry.Property(x => x.UserName).IsModified = true;
                 db.SaveChanges();
             }
             return RedirectToAction("Index", "User");

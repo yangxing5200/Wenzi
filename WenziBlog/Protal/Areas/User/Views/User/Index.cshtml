@@ -16,11 +16,43 @@
         if (cmd == "Delete") {
             // X.ajaxSend()
             location.href = "/User/User/Del/" + obj.data.Id;
-           // App.gp.store.removeAt(obj.index);
+            // App.gp.store.removeAt(obj.index);
         } else {
+
             App.UserForm.getForm().loadRecord(obj);
             App.EditWindow.show(this);
         }
+    };
+    var addRecord = function (form, grid) {
+        if (!form.getForm().isValid()) {
+            Ext.net.Notification.show({
+                iconCls: "alert alert-warning",
+                html: "窗口信息验证",
+                title: "Error"
+            });
+            return false;
+        }
+
+        grid.store.insert(0, form.getForm().getValues());
+        form.getForm().reset();
+
+        App.EditWindow.close();
+    };
+    var updateRecord = function (form, grid) {
+        if (form.getForm()._record == null) {
+            addRecord(form, grid)
+            return;
+        }
+        if (!form.getForm().isValid()) {
+            Ext.net.Notification.show({
+                iconCls: "icon-exclamation",
+                html: "Form is invalid",
+                title: "Error"
+            });
+            return false;
+        }
+        form.getForm().updateRecord();
+        App.EditWindow.close();
     };
 
 </script>
@@ -30,6 +62,7 @@
         .ID("gp")
         .Title("列表")
         .Width(600)
+       
         .Store(Html.X().Store()
             .Model(Html.X().Model()
                 .Fields(
@@ -47,8 +80,9 @@
                     new ModelField("Modify", ModelFieldType.String),
                     new ModelField("ModifyDate", ModelFieldType.Date)
                 )
-            )
-            .DataSource(Model)
+            ).Proxy(X.AjaxProxy().Url(Url.Action("GetData","User"))
+                                    .Reader(X.JsonReader().Root("data"))
+            
         )
         .ColumnModel(
             Html.X().Column().Text("编号").DataIndex("Id").Flex(1),
@@ -68,36 +102,36 @@
             .Icon(Icon.Delete)
             .Handler("this.up('grid').deleteSelected(); App.UserForm.getForm().reset();")
          )
-      ))
+      )))
 @(X.Window()
-        .ID("EditWindow")
-        .Icon(Icon.House)
-        .Title("用户信息编辑")
-        .Hidden(true)
-        .Width(520)
-        .Resizable(false)
-        .Modal(true)
-        .Items(items => items.Add(
-            Html.X().FormPanelForModel()
-            .ID("UserForm")
-            .Icon(Icon.User)
-            .Title("填写内容能提高账户安全性")
-            .Width(500)
-            .DefaultAnchor("100%")
-            .FieldDefaults(d =>
-                {
-                    d.LabelAlign = LabelAlign.Right;
-                    d.EmptyText = "请填写内容";
-                })
-            .Buttons(
-                Html.X().Button()
-                    .Text("保存")
-                    .Icon(Icon.Disk)
-                    .DirectClickAction("Save","User",Model)
-                    .Handler("updateRecord(this.up('form'), App.GridPanel1);"),
-                Html.X().Button()
-                    .Text("重置")
-                    .Handler("this.up('form').getForm().reset();")
-            )
-            ))
-)
+   .ID("EditWindow")
+   .Icon(Icon.House)
+   .Title("用户信息编辑")
+   .Hidden(true)
+   .Width(520)
+   .Resizable(false)
+   .Modal(true)
+   .Items(items => items.Add(
+       Html.X().FormPanelForModel()
+           .ID("UserForm")
+           .Icon(Icon.User)
+           .Title("填写内容能提高账户安全性")
+           .Width(500)
+           .DefaultAnchor("100%")
+           .FieldDefaults(d =>
+               {
+                   d.LabelAlign = LabelAlign.Right;
+                   d.EmptyText = "请填写内容";
+               })
+           .Buttons(
+               Html.X().Button()
+                   .Text("保存")
+                   .Icon(Icon.Disk)
+                 
+                   .DirectClickAction("Save","User",Model)
+                   .Handler("updateRecord(this.up('form'), App.GridPanel1);"),
+               Html.X().Button()
+                   .Text("重置")
+                   .Handler("this.up('form').getForm().reset();")
+           )
+                       )))

@@ -22,6 +22,11 @@ namespace Protal.Controllers
             return View();
         }
 
+        public ActionResult GetMenus()
+        {
+            return new EmptyResult();
+        }
+
         public ActionResult Contact()
         {
             ViewBag.Message = "QQ：418505093。";

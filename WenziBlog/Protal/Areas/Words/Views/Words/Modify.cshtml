@@ -4,11 +4,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-  @Html.HiddenFor(x=>x.Id)
+ 
 @using (@Html.BeginForm("Modify", "Words", FormMethod.Post))
 {
   
     @Html.TextBoxFor(x => x.Content);<br/>
+     @Html.HiddenFor(x=>x.Id)
     @Html.DropDownListFor(x => x.Authority, new ArraySegment<SelectListItem>(
        new[] {
             new SelectListItem{Text = "公开",Value = "0"},

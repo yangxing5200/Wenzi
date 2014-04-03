@@ -61,7 +61,8 @@ D:\workingspace\Wenzi\Protal\Protal\bin\zh-Hans\WebMatrix.WebData.resources.dll
 D:\workingspace\Wenzi\Protal\Protal\obj\Debug\Protal.csprojResolveAssemblyReference.cache
 D:\workingspace\Wenzi\Protal\Protal\obj\Debug\Protal.dll
 D:\workingspace\Wenzi\Protal\Protal\obj\Debug\Protal.pdb
-D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Microsoft.Web.Infrastructure.dll
+D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Protal.dll
+D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Protal.pdb
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Antlr3.Runtime.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Common.Logging.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Common.Logging.Log4Net.dll
@@ -75,6 +76,7 @@ D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\EntityFramework.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Ext.Net.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Ext.Net.Utilities.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\log4net.dll
+D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Microsoft.Web.Infrastructure.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Microsoft.Web.WebPages.OAuth.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\MiniProfiler.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\MiniProfiler.EntityFramework.dll
@@ -136,8 +138,6 @@ D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\zh-Hans\System.Web.WebPages.Razor
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\zh-Hans\WebMatrix.Data.resources.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\zh-Hans\Microsoft.Web.WebPages.OAuth.resources.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\zh-Hans\WebMatrix.WebData.resources.dll
-D:\workingspace\Git\Wenzi\WenziBlog\Protal\obj\Debug\Protal.csprojResolveAssemblyReference.cache
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\obj\Debug\Protal.dll
 D:\workingspace\Git\Wenzi\WenziBlog\Protal\obj\Debug\Protal.pdb
-D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Protal.dll
-D:\workingspace\Git\Wenzi\WenziBlog\Protal\bin\Protal.pdb
+D:\workingspace\Git\Wenzi\WenziBlog\Protal\obj\Debug\Protal.csprojResolveAssemblyReference.cache
