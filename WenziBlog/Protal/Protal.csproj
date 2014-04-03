@@ -205,6 +205,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ExtNetController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MoodController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -250,6 +251,7 @@
     <Content Include="img\parallax\3.png" />
     <Content Include="img\parallax\4.png" />
     <Content Include="img\parallax\arrows.png" />
+    <Content Include="img\parallax\xifu.jpg" />
     <Content Include="img\photos\1.jpg" />
     <Content Include="img\photos\2.jpg" />
     <Content Include="img\photos\3.jpg" />
@@ -263,6 +265,10 @@
     <Content Include="img\photos\s3.jpg" />
     <Content Include="img\photos\site.jpg" />
     <Content Include="img\photos\tn_1.jpg" />
+    <Content Include="img\photos\tn_11.jpg" />
+    <Content Include="img\photos\tn_12.jpg" />
+    <Content Include="img\photos\tn_13.jpg" />
+    <Content Include="img\photos\tn_14.jpg" />
     <Content Include="img\photos\tn_2.jpg" />
     <Content Include="img\photos\tn_3.jpg" />
     <Content Include="img\photos\tn_4.jpg" />
@@ -270,6 +276,7 @@
     <Content Include="img\photos\tn_6.jpg" />
     <Content Include="img\photos\tn_7.jpg" />
     <Content Include="img\photos\tn_8.jpg" />
+    <Content Include="img\photos\wenzi.jpeg" />
     <Content Include="img\prettyPhoto\dark_rounded\btnNext.png" />
     <Content Include="img\prettyPhoto\dark_rounded\btnPrevious.png" />
     <Content Include="img\prettyPhoto\dark_rounded\contentPattern.png" />
@@ -397,6 +404,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Mood\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_ContentLayout.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

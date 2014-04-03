@@ -1,6 +1,4 @@
-*{
-	border-radius: 0px !important;
-}
+
 
 body{
 	color: #666;
@@ -263,6 +261,7 @@ border-top:0px;
 	-o-transition:background 1s ease;
 	transition:background 1s ease;	
 	cursor:default;		
+    
 }
 
 .b-blue:hover{

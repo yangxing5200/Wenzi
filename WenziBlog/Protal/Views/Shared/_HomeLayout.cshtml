@@ -35,7 +35,7 @@
     <!--[if lt IE 9]>
   <script src="../../js/html5shim.js"></script>
   <![endif]-->
-
+    
     <!-- Favicon -->
     <link rel="shortcut icon" href="../../img/favicon/logo.jpg" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -74,9 +74,32 @@
                 </a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                        <li><a href="index.html">首页</a></li>
-                        <li><a href="index1.html">说说</a></li>
+                        <li>@Html.ActionLink("首页", "Index", "Home")</li>
+                        <li>@Html.ActionLink("说说", "Index", "Mood")</li>
                         <!-- Refer Bootstrap navbar doc -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">文字画廊<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="blog-2.html">男女情话</a></li>
+                                <li><a href="blog-4.html">屌丝空间</a></li>
+                                <li><a href="blog-single.html">技术博客</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">想去的地方<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="coming-soon.html">北京紫禁城</a></li>
+                                <li><a href="features-4.html">蒙古草原</a></li>
+                                <li><a href="statement.html">山东泰山</a></li>
+                                <li><a href="make-post.html">西藏布达拉宫</a></li>
+                                <li><a href="tasks.html">厦门鼓浪屿</a></li>
+                                <li><a href="resume.html">海南三亚</a></li>
+                                <li><a href="projects.html">湖南张家界</a></li>
+                                <li><a href="error-log.html">美国华人街</a></li>
+                                <li><a href="events.html">大学</a></li>
+                            </ul>
+                        </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">占星座<b class="caret"></b></a>
                             <ul class="dropdown-menu">
@@ -94,31 +117,9 @@
                                 <li><a href="login1.html">摩羯座(12月22日-1月19日)</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">想去的地方<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="coming-soon.html">北京紫禁城</a></li>
-                                <li><a href="features-4.html">蒙古草原</a></li>
-                                <li><a href="statement.html">山东泰山</a></li>
-                                <li><a href="tasks.html">厦门鼓浪屿</a></li>
-                                <li><a href="resume.html">海南三亚</a></li>
-                                <li><a href="projects.html">湖南张家界</a></li>
-                                <li><a href="make-post.html">西藏布达拉宫</a></li>
-                                <li><a href="error-log.html">美国华人街</a></li>
-                                 <li><a href="events.html">大学</a></li>
-                            </ul>
-                        </li>
 
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">文字画廊<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="blog-2.html">男女情话</a></li>
-                                <li><a href="blog-4.html">屌丝空间</a></li>
-                                <li><a href="blog-single.html">技术博客</a></li>
-                            </ul>
-                        </li>
 
-                        <li><a href="portfolio.html">投资组合</a></li>
+                        <li><a href="portfolio.html">投资合伙</a></li>
                         <li><a href="contactus.html">常联系</a></li>
                     </ul>
                 </div>
@@ -128,135 +129,9 @@
 
     <!-- Navigation bar ends -->
 
-    <!-- Slider starts -->
-
-    <div class="full-slider">
-        <!-- Slider (Flex Slider) -->
-
-        <div class="container">
-            <div class="row">
-                <div class="span12">
-                    <div class="flexslider">
-                        <ul class="slides">
-
-                            <li>
-
-                                <!-- Slider content -->
-                                <div class="flex-caption">
-                                    <!-- Left column -->
-                                    <div class="col-l">
-
-                                        <h2>What Do  Started Today</h2>
-
-                                        <h6>Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit. Nulla vitae cursus leo. Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit. Nulla vitae cursus leo.</h6>
+    @RenderBody()
 
 
-                                    </div>
-                                    <!-- Right column -->
-                                    <div class="col-r">
-
-                                        <!-- Use the class "flex-back" to add background inside flex slider -->
-
-                                        <h5>Nulla Vitae Rhoncus</h5>
-                                        <p>Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit. Nulla vitae cursus leo.</p>
-
-
-                                        <!-- Button -->
-                                        <div class="button">
-                                            <a href="#"><i class="icon-circle-arrow-down"></i>Download Our Software Today</a>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </li>
-
-                            <li>
-                                <div class="flex-caption flex-center">
-                                    <h2>Don't Miss This Theme</h2>
-
-                                    <p>Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit. Nulla vitae cursus leo. Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. </p>
-
-                                    <!-- Button -->
-                                    <div class="button">
-                                        <a href="#">Buy It Now</a>
-                                    </div>
-
-                                </div>
-                            </li>
-
-
-                            <li>
-
-                                <!-- Slider content -->
-                                <div class="flex-caption">
-                                    <!-- Left column -->
-                                    <div class="col-l">
-                                        <h2>Get Started Today</h2>
-                                        <h6>Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit.</h6>
-
-                                        <!-- Button -->
-                                        <div class="button">
-                                            <a href="#"><i class="icon-circle-arrow-down"></i>Download</a>
-                                        </div>
-
-                                    </div>
-                                    <!-- Right column -->
-                                    <div class="col-r">
-
-                                        <!-- Use the class "flex-back" to add background inside flex slider -->
-                                        <div class="flex-back">
-                                            <h5>Nulla Vitae Rhoncus</h5>
-                                            <p>Suspendisse potenti. Nulla vitae cursus leo. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit. Nulla vitae cursus leo.</p>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </li>
-
-
-                            <li>
-
-                                <!-- Slider content -->
-                                <div class="flex-caption">
-                                    <!-- Left column -->
-                                    <div class="col-l">
-                                        <h2>Someone Started Today</h2>
-                                        <h6>Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit.Vivamus vel ultricies elit.</h6>
-
-
-
-                                    </div>
-                                    <!-- Right column -->
-                                    <div class="col-r">
-
-                                        <!-- Use the class "flex-back" to add background inside flex slider -->
-
-                                        <h2>Nulla Vitae Rhoncus</h2>
-                                        <p>Suspendisse potenti. Morbi ac felis nec mauris imperdiet fermentum. Aenean sodales augue ac lacus hendrerit sed rhoncus erat hendrerit. Vivamus vel ultricies elit. Nulla vitae cursus leo.</p>
-
-
-                                    </div>
-                                </div>
-
-                            </li>
-
-
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slider Ends -->
-
-    <div class="content">
-        <div class="container">
-            @RenderBody()
-        </div>
-    </div>
 
     <!-- Social -->
 
@@ -335,8 +210,8 @@
 
                 <div class="span12">
                     <div class="copy">
-                        <h6>Metro <span class="color">Mania</span></h6>
-                        <p>Copyright &copy; <a href="#">Your Site</a> - <a href="index.html">Home</a> | <a href="aboutus.html">About Us</a> | <a href="faq.html">FAQ</a> | <a href="contactus.html">Contact Us</a></p>
+                        <h6>Sunny <span class="color">文子</span></h6>
+                        <p>版权所有 &copy; <a href="#">STUPID MAN</a> - @Html.ActionLink("首页", "Index", "Home") | <a href="aboutus.html">About Us</a> | <a href="faq.html">FAQ</a> | <a href="contactus.html">Contact Us</a></p>
                     </div>
                 </div>
             </div>
